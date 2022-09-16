@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.LoginFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="285dp"
+        android:layout_height="270dp"
+        android:layout_margin="8dp"
+        android:id="@+id/iv_logo"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_margin="24dp"
+        android:id="@+id/layout_email"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_email"
+            android:hint="hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_margin="24dp"
+        android:id="@+id/layout_passward"
+        app:layout_constraintTop_toBottomOf="@+id/layout_email"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.button.MaterialButton
+    android:layout_width="match_parent"
+    android:layout_margin="24dp"
+    android:padding="16dp"
+    android:text="Login"
+    android:id="@+id/btn_login"
+    app:cornerRadius="16dp"
+    app:layout_constraintTop_toBottomOf="@id/layout_passward"
+    app:layout_constraintEnd_toEndOf="@id/layout_passward"
+    app:layout_constraintStart_toStartOf="@id/layout_passward"
+    android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
