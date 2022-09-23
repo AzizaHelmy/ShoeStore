@@ -8,11 +8,12 @@ object IntConverter {
     fun intToString(value: Int?): String {
         return value.toString() ?: ""
     }
-@JvmStatic
+
+    @JvmStatic
     fun stringToInt(value: String): Int? {
         return if (value.isNotEmpty()) {
             value.toInt()
-        }else{
+        } else {
             0
         }
     }

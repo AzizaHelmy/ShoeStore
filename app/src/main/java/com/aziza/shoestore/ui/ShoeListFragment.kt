@@ -26,12 +26,14 @@ class ShoeListFragment : Fragment() {
             findNavController().navigate(R.id.loginFragment)
         }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // binding = FragmentShoeListBinding.inflate(layoutInflater) //i prefare this "(
-        binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_shoe_list, container, false)
+        binding =
+            DataBindingUtil.inflate(layoutInflater, R.layout.fragment_shoe_list, container, false)
         return binding.root
     }
 
@@ -46,11 +48,11 @@ class ShoeListFragment : Fragment() {
 
     private fun getAllShoe() {
         viewModel.shoeListResult.observe(viewLifecycleOwner) {
-            val listBinding = ItemShoeListBinding.inflate(LayoutInflater.from(requireContext()),binding.shoesListLayout,false)
-            //binding.shoesListLayout.removeAllViews()
             it.forEach {
+                val listBinding = ItemShoeListBinding.inflate(
+                    LayoutInflater.from(requireContext()),binding.shoesListLayout, false)
+                
                 listBinding.apply {
-                    binding.shoesListLayout.removeAllViews()
                     tvName.text = it.name
                     tvCompany.text = it.company
                     tvSize.text = it.size.toString()
@@ -60,16 +62,6 @@ class ShoeListFragment : Fragment() {
             }
         }
     }
-
-//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-//        super.onCreateOptionsMenu(menu, inflater)
-//        inflater.inflate(R.menu.logout_menu,menu)
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//
-//        return super.onOptionsItemSelected(item)
-//    }
 
     private fun setupMenu() {
         (requireActivity() as MenuHost).addMenuProvider(object : MenuProvider {
@@ -82,7 +74,7 @@ class ShoeListFragment : Fragment() {
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-              findNavController().navigate(R.id.loginFragment)
+                findNavController().navigate(R.id.loginFragment)
                 return true
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
