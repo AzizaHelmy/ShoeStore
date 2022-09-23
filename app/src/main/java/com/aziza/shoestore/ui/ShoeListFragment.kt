@@ -47,8 +47,10 @@ class ShoeListFragment : Fragment() {
     private fun getAllShoe() {
         viewModel.shoeListResult.observe(viewLifecycleOwner) {
             val listBinding = ItemShoeListBinding.inflate(LayoutInflater.from(requireContext()),binding.shoesListLayout,false)
+            //binding.shoesListLayout.removeAllViews()
             it.forEach {
                 listBinding.apply {
+                    binding.shoesListLayout.removeAllViews()
                     tvName.text = it.name
                     tvCompany.text = it.company
                     tvSize.text = it.size.toString()

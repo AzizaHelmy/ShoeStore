@@ -15,7 +15,7 @@ class LoginFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
+
         val callback = requireActivity().onBackPressedDispatcher.addCallback(this) {
            requireActivity().finish()
         }
