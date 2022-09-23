@@ -1,26 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
     </data>
-
+    <!--I'm using ConstraintLayout as i can draw any design i need,
+       and it recommended from google, and it save the same design in a diffrent screen sizes,
+        and it flixable with me "D-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.InstructionsFragment">
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:text="Start"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/start_btn"
-            android:layout_marginBottom="64dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/fab_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_next"
+            android:text="Go"
+            app:backgroundTint="@color/purple_700"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_height="wrap_content" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
+        <ImageView
+            android:id="@+id/iv_shoes"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/shoes" />
+
+        <TextView
+            android:id="@+id/tv_inst1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:fontFamily="@font/adamina"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/black"
+            android:text="@string/instraction"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_shoes" />
+
+        <TextView
+            android:id="@+id/tv_inst2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:gravity="center"
+            android:text="@string/click_next_to_discover_them"
+            android:textColor="@color/purple_700"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_inst1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -6,13 +6,15 @@
     <data>
 
     </data>
-
+    <!--I'm using ConstraintLayout as i can draw any design i need,
+       and it recommended from google, and it save the same design in a diffrent screen sizes,
+        and it flixable with me "D-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <androidx.fragment.app.FragmentContainerView
+        <fragment
             android:id="@+id/fragmentContainerView"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"

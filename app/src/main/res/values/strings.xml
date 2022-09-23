@@ -2,4 +2,10 @@
     <string name="app_name">ShoeStore</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="click_next_to_discover_them">Click Next To Discover them</string>
+    <string name="instraction">We have some Instructions for you to help you discover our products and buy it easly:</string>
+    <string name="start">Let\'s start to discover our products, and buy a new Shoe 👟</string>
+    <string name="welcome">Welcome in Our Store</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="login">Login</string>
 </resources>

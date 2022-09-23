@@ -8,14 +8,16 @@ import com.aziza.shoestore.model.Shoe
 class SharedViewModel : ViewModel() {
     private val _shoeListResult = MutableLiveData<List<Shoe>>()
     val shoeListResult: LiveData<List<Shoe>> = _shoeListResult
-
+    private var shoeList = mutableListOf<Shoe>()
 
     fun addShoe(newShoe: Shoe) {
-        _shoeListResult.value = mutableListOf()
-        _shoeListResult.value = listOf(newShoe)
+        newShoe.let { item ->
+            shoeList.add(item)
+            _shoeListResult.value = shoeList
+        }
     }
 
-    fun validateData(name: String, company: String, size: Double, description: String) {
+    fun validateData(name: String, company: String, size: Int, description: String) {
 
     }
 }

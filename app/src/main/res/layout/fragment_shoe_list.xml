@@ -6,7 +6,9 @@
     <data>
 
     </data>
-
+    <!--I'm using ConstraintLayout as i can draw any design i need,
+       and it recommended from google, and it save the same design in a diffrent screen sizes,
+        and it flixable with me "D-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,16 +25,12 @@
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="64dp"
             android:src="@drawable/ic_add"
-            android:tint="@color/white"
             android:id="@+id/add_shoe_btn"
             app:backgroundTint="@color/purple_700"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/fab_style" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

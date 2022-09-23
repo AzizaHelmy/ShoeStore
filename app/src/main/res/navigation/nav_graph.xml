@@ -13,7 +13,7 @@
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment"
-            app:popUpTo="@id/welcomeFragment"
+            app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true"/>
     </fragment>
     <fragment
@@ -24,7 +24,7 @@
         <action
             android:id="@+id/action_welcomeFragment_to_instructionsFragment"
             app:destination="@id/instructionsFragment"
-            app:popUpTo="@id/welcomeFragment"
+            app:popUpTo="@id/instructionsFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -52,7 +52,7 @@
         <action
             android:id="@+id/action_instructionsFragment_to_shoeListFragment"
             app:destination="@id/shoeListFragment"
-            app:popUpTo="@id/instructionsFragment"
-            app:popUpToInclusive="true" />
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false" />
     </fragment>
 </navigation>

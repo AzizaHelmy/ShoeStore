@@ -36,14 +36,15 @@ class ShoeDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.cancleBtn.setOnClickListener {
-            findNavController().navigate(R.id.shoeListFragment)
+            findNavController().navigateUp()
         }
         binding.saveBtn.setOnClickListener {
+
             val name = binding.nameEt.text.toString()
             val company = binding.copmanyEt.text.toString()
-            val size = (binding.sizeEt.text.toString()).toDouble()
+            val size = Integer.parseInt(binding.sizeEt.text.toString())
             val description = binding.descEt.text.toString()
-            viewModel.validateData(name,company,size,description)
+            viewModel.validateData(name, company, size, description)
             val newShoe = Shoe(name, size, company, description)
             viewModel.addShoe(newShoe)
             findNavController().navigate(R.id.shoeListFragment)
